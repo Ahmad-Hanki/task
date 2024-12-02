@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import StatusSelector from '@/components/StatusSelector'
+import StatusSelector from "@/components/StatusSelector";
 import GenderSelector from "@/components/GenderSelector";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,8 +18,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="space-y-2 mt-5">
-          <StatusSelector />
-          <GenderSelector />
+          <Suspense fallback={<div>Loading...</div>}>
+            <StatusSelector />
+            <GenderSelector />
+          </Suspense>
         </div>
         {children}
       </body>
