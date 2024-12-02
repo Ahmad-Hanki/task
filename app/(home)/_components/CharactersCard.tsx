@@ -22,6 +22,7 @@ const CharactersCard = ({ objectData }: { objectData: Character }) => {
               : "🟡"}{" "}
             {objectData.status} - {objectData.species}
           </p>
+          <p>{objectData.gender}</p>
         </CardHeader>
         <CardContent className="space-y-3">
           <div className="space-y-1">
