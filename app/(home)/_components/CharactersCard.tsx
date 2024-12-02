@@ -1,14 +1,14 @@
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
+import { Character } from "./CharactersGrid";
 
-const CharactersCard = ({ objectData }: { objectData: any }) => {
+const CharactersCard = ({ objectData }: { objectData: Character }) => {
   return (
     <div>
       <Card>
